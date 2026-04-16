@@ -18,16 +18,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Referencia al ImageView principal
+        // referencia al imageView principal
         imageView = findViewById(R.id.imageView)
 
-        // Referencia al RecyclerView
+        // referencia al RecyclerView
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
 
-        // Configuración del adaptador
+        // configuración del adaptador
         val adapter = ImagenAdapter(imagenes) { position ->
 
-            // Mostrar la imagen seleccionada en grande
+            // mostrar la imagen seleccionada en grande
             imageView.setImageResource(imagenes[position])
         }
 
